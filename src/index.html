@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Try Angular</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+
+	<!-- Referencing the APP Module -->
+	<script src="js/app/app.module.js" ></script>
+	<script src="js/app/app.config.js" ></script>
+
+	<!-- Referencing the blog-list Module -->
+	<script src="js/app/blog-list/blog-list.module.js" ></script>
+	<script src="js/app/blog-list/blog-list.component.js" ></script>
+
+	<style>
+		.red {
+			font-size: 72px;
+		}
+
+		.def {
+			color: inherit;
+		}
+
+	</style>
+</head>
+<body>
+	<!--Using Template Code -->
+
+	<p class="def" ng-class="{'red':name=='Asmaa'}">
+		Hello, 
+			<span ng-if="name">{{ name }}</span>
+			<span ng-if="!name">World</span>
+					!
+	</p>
+	<input type="text" ng-model="name"/>
+
+    <!-- Controllers -->
+
+	<blog-list></blog-list>
+</body>
+</html>
